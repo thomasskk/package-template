@@ -1,0 +1,43 @@
+{
+	"name": "@thomasskk/PACKAGE_NAME",
+	"version": "1.0.0",
+	"description": "PACKAGE_NAME",
+	"packageManager": "pnpm@9.0.6",
+	"exports": {
+		".": {
+			"types": "./lib/index.d.ts",
+			"import": "./lib/index.mjs",
+			"require": "./lib/index.mjs"
+		}
+	},
+	"release": {
+		"branches": ["main"]
+	},
+	"files": ["/lib"],
+	"publishConfig": {
+		"access": "public"
+	},
+	"type": "module",
+	"node": ">=16",
+	"scripts": {
+		"test": "vitest run",
+		"build": "rm -fr lib && rollup -c"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@rollup/plugin-terser": "^0.4.4",
+		"@rollup/plugin-typescript": "^11.1.6",
+		"@types/node": "^20.12.2",
+		"@typescript-eslint/eslint-plugin": "^7.4.0",
+		"@typescript-eslint/parser": "^7.4.0",
+		"rollup": "^4.13.2",
+		"semantic-release": "^23.0.8",
+		"tslib": "^2.6.2",
+		"typescript": "^5.4.3",
+		"vitest": "^1.4.0"
+	},
+	"dependencies": {
+		"htmlparser2": "^9.1.0"
+	}
+}
